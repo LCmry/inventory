@@ -6,6 +6,6 @@ from inventory_app.models import Item
 
 def index(request):
   items = Item.objects.all()
-  t = loader.get_template('inventory_app/index.html')
+  t = loader.get_template('index.html')
   c = Context({ 'items': items, })
   return HttpResponse(t.render(c))
