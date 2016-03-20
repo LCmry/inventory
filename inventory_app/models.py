@@ -6,8 +6,8 @@ class Item(models.Model):
   total = models.IntegerField(default=0)
   image = models.ImageField(upload_to="images", blank=True, null=True)
   description = models.TextField()
-  category = models.ForeignKey(Category, on_delete=models.CASCADE)
-  outlets = models.ManyToManyField(Outlet)
+  category = models.ForeignKey('Category', on_delete=models.CASCADE)
+  outlets = models.ManyToManyField('Outlet')
 
   def __str__(self):
     return self.name
