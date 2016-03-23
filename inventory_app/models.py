@@ -5,7 +5,7 @@ class Item(models.Model):
   last_modified = models.DateTimeField(auto_now=True)
   total = models.IntegerField(default=0)
   image = models.ImageField(upload_to="images", blank=True, null=True)
-  description = models.TextField()
+  description = models.TextField(blank=True)
   category = models.ForeignKey('Category', on_delete=models.CASCADE)
   outlets = models.ManyToManyField('Outlet', through='Count')
 
