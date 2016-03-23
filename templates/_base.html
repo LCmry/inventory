@@ -9,10 +9,8 @@
 
     <!-- Style -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <style>
-      body {padding-top: 60px;}
-      footer {padding-top: 50px;}
-    </style>
+    {% load staticfiles %}
+    <link href="{% static "styles/style.css" %}" rel="stylesheet">
   </head>
 
   <body>
@@ -30,15 +28,16 @@
     </div>
 
     <!-- Body -->
-    <div class="container">
+    <div class="container" id="content">
       {% block content %}
       {% endblock %}
+      <div class="push"></div>
     </div>
 
     <!-- Footer -->
     <footer>
       <div class="container">
-        <div class="row">
+        <div class="row" id="footer-content">
           <div class="col-md-4">
             <a class="navbar-brand" href="/">Inventory</a>
           </div>

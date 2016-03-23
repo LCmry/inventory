@@ -1,0 +1,37 @@
+body {
+  height: 100%;
+}
+
+#content {
+  min-height: 100%;
+  margin-bottom: 150px;
+}
+
+footer {
+  position: absolute;
+  height: 150px;
+  bottom: 0;
+  width: 100%;
+  background-color: #004E43;
+}
+
+#footer-content {
+  padding-top: 25px;
+}
+
+#footer-content a {
+  color: #D4D4D4;
+  text-decoration: none;
+}
+
+#footer-content a:hover {
+  color: #BDBDBD;
+}
+
+#footer-content {
+  color: #D4D4D4;
+}
+
+#footer-content li {
+  list-style: none;
+}
