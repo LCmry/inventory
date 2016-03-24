@@ -25,8 +25,16 @@ body {
   padding-bottom: 40px;
 }
 
+.navbar.navbar-fixed-top a:hover {
+  color: #979797;
+}
+
 .navbar-brand {
   font-size: 22px;
+}
+
+.navbar-form {
+  padding-top: 27px;
 }
 
 #content {

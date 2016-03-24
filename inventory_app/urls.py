@@ -7,4 +7,5 @@ urlpatterns = [url(r'^$', views.index, name='index'),
               url(r'^item/(?P<id>[0-9]+)/$', views.item, name='item'),
               url(r'^category/(?P<id>[0-9]+)/$', views.category, name='category'),
               url(r'^outlet/(?P<id>[0-9]+)/$', views.outlet, name='outlet'),
+              url(r'^search/', views.searchResults, name='search'),
               ]

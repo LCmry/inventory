@@ -3,6 +3,9 @@ from django.template import Context, loader
 from django.http import HttpResponse
 
 from inventory_app.models import Item, Category, Outlet, Count
+import operator
+from functools import reduce
+from django.db.models import Q
 
 def index(request):
   items = Item.objects.all()
@@ -42,3 +45,22 @@ def item(request, id):
   t = loader.get_template('item.html')
   c = Context({ 'item': item })
   return HttpResponse(t.render(c))
+
+def searchResults(request):
+  items = get_queryset(request)
+  t = loader.get_template('searchResults.html')
+  c = Context({ 'items': items })
+  return HttpResponse(t.render(c))
+
+def get_queryset(req):
+  query = req.GET.get('q')
+  if query:
+    query_list = query.split()
+    items = Item.objects.all()
+    result = items.filter(
+      reduce(operator.and_,
+          (Q(name__icontains=q) for q in query_list)) |
+      reduce(operator.and_,
+          (Q(description__icontains=q) for q in query_list))
+      )
+  return result
