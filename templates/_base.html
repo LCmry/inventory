@@ -21,8 +21,8 @@
           <a class="navbar-brand" href="/">Inventory</a>
         </div>
         <ul class="nav navbar-nav">
-          <li><a href="#">Categories</a></li>
-          <li><a href="#">Outlets</a></li>
+          <li><a href="/categories">Categories</a></li>
+          <li><a href="/outlets">Outlets</a></li>
         </ul>
       </div>
     </div>
@@ -31,11 +31,10 @@
     <div class="container" id="content">
       {% block content %}
       {% endblock %}
-      <div class="push"></div>
     </div>
 
     <!-- Footer -->
-    <footer>
+    <footer class="navbar navbar-bottom">
       <div class="container">
         <div class="row" id="footer-content">
           <div class="col-md-4">
@@ -44,8 +43,8 @@
           <div class="col-md-4">
             <ul>
               <li><a href="/">Home</a></li>
-              <li><a href="#">Categories</a></li>
-              <li><a href="#">Outlets</a></li>
+              <li><a href="/categories">Categories</a></li>
+              <li><a href="/outlets">Outlets</a></li>
             </ul>
           </div>
           <div class="col-md-4">

@@ -1,10 +1,10 @@
 {% extends '_base.html' %}
 
 {% block content %}
-
-<ul>
-  {% for category in catgories %}
-  <li><a href="#">{{ category.name }}</a></li>
+<h1>Categories</h1>
+<ul class="name-list">
+  {% for category in categories %}
+  <li><a href="/category/{{ category.id }}">{{ category.name }}</a></li>
   {% endfor %}
 </ul>
 

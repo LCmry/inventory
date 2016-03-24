@@ -1,0 +1,21 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<div class="center">
+  <h1>{{ item.name }}</h1>
+  {% if item.image %}
+    <img src="/media/{{item.image}}" alt="{{item.name}}">
+  {% endif %}
+  <ul>
+  {% for outlet in item.count_set.all %}
+    <li>{{ outlet.outlet.name }}: {{ outlet.amount }}</li>
+  {% endfor %}
+    <li>Total: {{ item.total }}</li>
+  </ul>
+  <p>Description:</br>{{ item.description }}</p>
+  <p><small>Category: {{ item.category }}</br>
+    Last Modified: {{ item.last_modified }}</small></p>
+</div>
+
+
+{% endblock %}
