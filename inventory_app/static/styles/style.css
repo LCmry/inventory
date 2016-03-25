@@ -87,3 +87,7 @@ footer {
 .name-list a:hover {
   color: #979797;
 }
+
+.row {
+  height: 100%;
+}
