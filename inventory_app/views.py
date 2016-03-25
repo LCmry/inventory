@@ -52,6 +52,7 @@ def searchResults(request):
   c = Context({ 'items': items })
   return HttpResponse(t.render(c))
 
+# Adapted from: https://www.calazan.com/adding-basic-search-to-your-django-site/
 def get_queryset(req):
   query = req.GET.get('q')
   if query:
