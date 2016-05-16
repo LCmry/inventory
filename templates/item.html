@@ -4,7 +4,7 @@
 <div class="center">
   <h1>{{ item.name }}</h1>
   {% if item.image %}
-    <img src="/images/{{item.image}}" alt="{{item.name}}">
+    <img class="fullsize" src="/images/{{item.image}}" alt="{{item.name}}">
   {% endif %}
   <ul>
   {% for outlet in item.count_set.all %}

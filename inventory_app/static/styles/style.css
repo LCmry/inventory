@@ -91,3 +91,13 @@ footer {
 .row {
   height: 100%;
 }
+
+.thumbnail img{
+  max-width: 90%;
+  max-height: 90%;
+}
+
+img .fullsize{
+  max-width: 30%;
+  max-height: 30%;
+}
