@@ -25,7 +25,7 @@ SECRET_KEY = 'f$i+)_&2&27b7@yn6on-x#+%9-^2-hg^zvhownnl$=ynn*(7gp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['stewardinginv.herokuapp.com']
 
 
 # Application definition
@@ -119,3 +119,4 @@ STATICFILES_DIRS = (
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
