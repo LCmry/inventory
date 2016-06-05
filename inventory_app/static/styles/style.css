@@ -6,26 +6,26 @@ body {
   padding-top: 120px;
 }
 
-.navbar.navbar-fixed-top {
+.navbar.navbar-default {
   height: 100px;
   background-color: #004E43;
 }
 
-.navbar.navbar-fixed-top a {
+.navbar.navbar-default a {
   color: #D4D4D4;
   text-decoration: none;
 }
 
-.navbar.navbar-fixed-top li {
+.navbar.navbar-default li {
   font-size: 18px;
 }
 
-.navbar.navbar-fixed-top a {
+.navbar.navbar-default a {
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
-.navbar.navbar-fixed-top a:hover {
+.navbar.navbar-default a:hover {
   color: #979797;
 }
 

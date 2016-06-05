@@ -16,7 +16,7 @@
 
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-fixed-top">
+    <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -35,9 +35,6 @@
             <li><a href="/categories">Categories <span class="sr-only">(current)</span></a></li>
             <li><a href="/outlets">Outlets</a></li>
           </ul>
-          <!-- Search
-        Source: https://www.calazan.com/adding-basic-search-to-your-django-site/
-        -->
           <form class="navbar-form navbar-right" role="search" action="{% url 'search' %}" method="get" accept-charset="utf-8">
             <div class="form-group">
               <input type="text" class="form-control" name="q" placeholder="Search">
@@ -48,6 +45,8 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+    <!-- Search
+        Source: https://www.calazan.com/adding-basic-search-to-your-django-site/ -->
 
     <!-- Body -->
     <div class="container" id="content">
