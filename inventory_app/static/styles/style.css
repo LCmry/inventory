@@ -2,10 +2,6 @@ html, body {
   height: 100%;
 }
 
-body {
-  padding-top: 120px;
-}
-
 .navbar.navbar-default {
   height: 100px;
   background-color: #004E43;
