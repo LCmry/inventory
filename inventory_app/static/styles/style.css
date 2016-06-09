@@ -16,12 +16,16 @@ html, body {
   font-size: 18px;
 }
 
+.navbar.navbar-default li a {
+  color: #D4D4D4;
+}
+
 .navbar.navbar-default a {
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
-.navbar.navbar-default a:hover {
+.navbar.navbar-default li a:hover {
   color: #979797;
 }
 
