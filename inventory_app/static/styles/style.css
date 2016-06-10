@@ -5,6 +5,7 @@ html, body {
 .navbar.navbar-default {
   height: 100px;
   background-color: #004E43;
+  z-index: 1001;
 }
 
 .navbar.navbar-default a {
@@ -20,9 +21,16 @@ html, body {
   color: #D4D4D4;
 }
 
+@media (max-width: 979px) {
+  .navbar.navbar-nav li a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
 .navbar.navbar-default a {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
 .navbar.navbar-default li a:hover {
@@ -33,13 +41,28 @@ html, body {
   font-size: 22px;
 }
 
+.nav.navbar-nav li {
+  background-color: #004E43;
+}
+
+.navbar-toggle {
+  margin-left: 15px;
+  margin-top: 45%;
+}
+
+.search {
+  background-color: #004E43;
+}
+
 .navbar-form {
   padding-top: 27px;
+  border: 0px;
 }
 
 #content {
   min-height: 100%;
   margin-bottom: 100px;
+  clear: left;
 }
 
 .navbar.navbar-bottom {
