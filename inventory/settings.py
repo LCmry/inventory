@@ -25,6 +25,8 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+import dj_database_url
+
 # Dev
 if not DEBUG:
     DATABASES = {
@@ -32,7 +34,6 @@ if not DEBUG:
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
         }
     }
-    import dj_database_url
     db_from_env = dj_database_url.config(conn_max_age=500)
     DATABASES['default'].update(db_from_env)
     AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
