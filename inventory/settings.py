@@ -38,7 +38,9 @@ if not DEBUG:
     AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
     AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
     AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
+    MEDIA_URL = 'http://%s.s3.amazonaws.com/images/' % (AWS_STORAGE_BUCKET_NAME)
     STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     ALLOWED_HOSTS = ['stewardinginv.herokuapp.com']
 
